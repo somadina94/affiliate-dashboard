@@ -19,7 +19,7 @@ export const items = [
     icon: FolderDotIcon,
   },
   {
-    title: "Campaigns",
+    title: "Campaignss",
     url: "#",
     icon: BarChart3Icon,
   },
