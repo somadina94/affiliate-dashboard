@@ -1,6 +1,6 @@
 import {
   Home,
-  BarChart3Icon,
+  BarChart,
   FolderDotIcon,
   PencilIcon,
   PersonStanding,
@@ -21,7 +21,7 @@ export const items = [
   {
     title: "Campaignss",
     url: "#",
-    icon: BarChart3Icon,
+    icon: BarChart,
   },
   {
     title: "Offers",
