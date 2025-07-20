@@ -75,7 +75,7 @@ export default function Page() {
         </div>
         <div className="flex justify-between items-center border p-4 rounded-2xl">
           <p>Need help? Contact support team.</p>
-          <Button asChild className="bg-blue-500">
+          <Button asChild className="bg-blue-500 text-white">
             <Link href="/" className="flex gap-2">
               Contact support
             </Link>
