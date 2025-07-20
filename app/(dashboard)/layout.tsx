@@ -40,7 +40,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
               ))}
             </SidebarMenu>
           </SidebarContent>
-          <Button className="mt-auto mx-4 bg-blue-500 text-white">
+          <Button className="mt-auto mx-4 bg-blue-500 hover:bg-blue-700 text-white">
             New Campaign
           </Button>
           <SidebarFooter className="flex flex-row justify-between items-center">

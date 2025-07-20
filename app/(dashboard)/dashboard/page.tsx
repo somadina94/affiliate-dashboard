@@ -11,8 +11,8 @@ import {
 } from "@/components/ui/table";
 
 import { tableData } from "@/constants/table";
-import { ArrowBigRight } from "lucide-react";
 import Link from "next/link";
+import { MdKeyboardDoubleArrowRight } from "react-icons/md";
 
 export default function Page() {
   return (
@@ -67,24 +67,25 @@ export default function Page() {
       </Table>
       <h2>Quick actions</h2>
       <div className="space-y-2">
-        <div className="flex justify-between items-center border p-4 rounded-2xl">
+        <div className="flex flex-col md:flex-row gap-2 justify-between items-center border p-4 rounded-2xl">
           <p>View FAQ for quick answers to common questions</p>
           <Link href="/" className="flex gap-2">
-            Go to FAQ <ArrowBigRight />
+            Go to FAQ <MdKeyboardDoubleArrowRight className="w-6 h-6 ml-auto" />
           </Link>
         </div>
-        <div className="flex justify-between items-center border p-4 rounded-2xl">
+        <div className="flex flex-col md:flex-row gap-2 justify-between items-center border p-4 rounded-2xl">
           <p>Need help? Contact support team.</p>
-          <Button asChild className="bg-blue-500 text-white">
+          <Button asChild className="bg-blue-500 hover:bg-blue-700 text-white">
             <Link href="/" className="flex gap-2">
               Contact support
             </Link>
           </Button>
         </div>
-        <div className="flex justify-between items-center border p-4 rounded-2xl">
+        <div className="flex flex-col md:flex-row gap-2 justify-between items-center border p-4 rounded-2xl">
           <p>Want to learn more about our platform?</p>
           <Link href="/" className="flex gap-2">
-            View our Help center <ArrowBigRight />
+            View our Help center{" "}
+            <MdKeyboardDoubleArrowRight className="w-6 h-6 ml-auto" />
           </Link>
         </div>
       </div>
