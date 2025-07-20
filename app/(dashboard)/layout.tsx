@@ -22,25 +22,21 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     <div>
       <SidebarProvider className="hidden md:flex">
         <Sidebar>
-          <SidebarContent className="p-4">
+          <SidebarContent className="mt-12">
             <SidebarMenu className="space-y-4">
-              {items.map((item) => {
-                const Icon = item.icon;
-                return (
-                  <SidebarMenuItem key={item.title}>
-                    <SidebarMenuButton
-                      asChild
-                      className="font-medium text-[18px]"
-                    >
-                      <Link href={item.url}>
-                        <Icon />
-                        <span>{item.title}</span>
-                        <MdKeyboardDoubleArrowRight className="w-6 h-6 ml-auto" />
-                      </Link>
-                    </SidebarMenuButton>
-                  </SidebarMenuItem>
-                );
-              })}
+              <nav className="flex flex-col justify-between">
+                {items.map((item, i) => (
+                  <Link
+                    href={item.url}
+                    key={i}
+                    className="flex items-center gap-2 px-4 py-4 border-b-2 hover:bg-blue-500"
+                  >
+                    <item.icon />
+                    <span>{item.title}</span>
+                    <MdKeyboardDoubleArrowRight className="w-6 h-6 ml-auto" />
+                  </Link>
+                ))}
+              </nav>
             </SidebarMenu>
           </SidebarContent>
           <Button className="mt-auto mx-4 bg-blue-500 hover:bg-blue-700 text-white">
